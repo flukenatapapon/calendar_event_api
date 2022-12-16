@@ -57,3 +57,5 @@ group :development do
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
 end
+
+gem 'awesome_print', require: 'ap'
