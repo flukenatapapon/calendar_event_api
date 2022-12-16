@@ -62,3 +62,5 @@ gem 'awesome_print', require: 'ap'
 
 gem 'devise', '~> 4.8'
 gem 'jwt', '~> 2.5'
+
+gem 'figaro', '~> 1.2'
