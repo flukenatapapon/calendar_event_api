@@ -47,6 +47,6 @@ class Api::V1::Events::EventsController < Api::V1::ApplicationV1Controller
   end
 
   def event_params
-    params.require(:event).permit(:name, :description)
+    params.require(:event).permit(:name, :description, event_dates_attributes: %i[start_date end_date])
   end
 end
