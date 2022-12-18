@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   before_create :generate_auth_token
 
+  has_many :events, dependent: :destroy
+
   def jwt(exp = 15.days.from_now)
     JWT.encode({ auth_token: auth_token, exp: exp.to_i }, ENV['secret_key'], 'HS256')
   end
