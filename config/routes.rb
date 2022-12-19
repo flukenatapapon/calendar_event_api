@@ -15,6 +15,10 @@ Rails.application.routes.draw do
         patch '/:event_id', to: 'events#update'
         delete '/:event_id', to: 'events#destroy'
       end
+
+      namespace :event_dates do
+        post '/', to: 'event_dates#create'
+      end
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
