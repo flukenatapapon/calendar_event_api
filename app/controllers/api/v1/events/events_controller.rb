@@ -12,6 +12,7 @@ class Api::V1::Events::EventsController < Api::V1::ApplicationV1Controller
 
   def create
     @event = Event.new(event_params)
+    @event.user_id = @current_user.id
 
     if @event.save
       render json: { data: @event }, status: :ok
